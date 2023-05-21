@@ -186,15 +186,15 @@ nav .fa{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 h1{
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
 }
 p{
     color: #777;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -205,22 +205,28 @@ p{
     display: flex;
     justify-content: space-between;
 }
+.row2{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .course-col{
     flex-basis: 31%;
-    background: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
-    box-sizing: border-box;
 }
 h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    font-size: 30px;
 }
+/*
 .course-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-}
+}*/
 @media(max-width: 700px){
     .row{
         flex-direction: column;
@@ -277,6 +283,10 @@ h3{
 
 .youtube-links{
     color: white;
+    text-decoration: none;
+}
+.youtube-links2{
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -348,20 +358,28 @@ h3{
 /*----------call to action------*/
 
 .cta{
-    margin: 100px auto;
+    margin: 10px auto;
     width: 80%;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .cta h1{
     color: #fff;
     margin-bottom: 40px;
     padding: 0;
+}
+.cta p{
+    color: #fff;
 }
 
 @media(max-width: 700px){
@@ -412,16 +430,16 @@ h3{
 .about-us{
     width: 80%;
     margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .about-col1{
     flex-basis: 48%;
-    padding: 30px 2px;
+    padding: 10px 2px;
 }
 .about-col2{
     flex-basis: 48%;
-    padding: 130px 2px;
+    padding: 10px 2px;
 }
 
 .image1{
@@ -432,7 +450,14 @@ h3{
     width: 70%;
     border-radius: 40px;
 }
-
+.image3{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.image3:hover {
+    transform: scale(1.1);
+}
 .about-col1 #about-cinemen{
     width: 50%;
     padding: 0 100px;

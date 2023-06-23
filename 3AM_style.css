@@ -15,6 +15,35 @@ body {
     background-size: cover;
     position: relative;
 }
+
+@media (hover: hover) {
+    .nav-links ul li:hover::after{
+        width: 100%;
+    }
+    .hero-btn:hover{
+        border: 3px solid #fe0707;
+        background: #fe0707;
+        transition: 0.5s;
+    }
+    .layer:hover{
+        background: rgba(226,0,0,0.6);
+    }
+    .layer:hover h3{
+        bottom: 49%;
+        opacity: 1;
+        border: 3px solid #fff;
+    }
+    .image3:hover {
+        transform: scale(1.1);
+    }
+    .red-btn:hover{
+        color: #fff;
+    }  
+}
+
+@media (hover: none) {
+    
+}
 /*
 .back-video{
     background-color: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
@@ -70,9 +99,7 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
-    width: 100%;
-}
+
 .text-box{
     width: 90%;
     color: #fff;
@@ -135,15 +162,10 @@ nav img{
     border: 3px solid #fff;
     padding: 12px 34px;
     border-radius: 15px;
-    font-size: 13px;
+    font-size: 15px;
     background: transparent;
     position: relative;
     cursor: pointer;
-}
-.hero-btn:hover{
-    border: 3px solid #fe0707;
-    background: #fe0707;
-    transition: 0.5s;
 }
 
 nav .fa{
@@ -240,12 +262,17 @@ h3{
     text-align: center;
     padding-top: 50px;
 }
+.campus .row{
+    justify-content: center;
+}
 .campus-col{
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .campus-col img{
     width: 100%;
@@ -260,9 +287,7 @@ h3{
     left: 0;
     transition: 0.5s;
 }
-.layer:hover{
-    background: rgba(226,0,0,0.6);
-}
+
 .layer h3{
     width: 100%;
     font-weight: 500;
@@ -275,11 +300,7 @@ h3{
     opacity: 0;
     transition: 0.5s;
 }
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-    border: 3px solid #fff;
-}
+
 
 .youtube-links{
     color: white;
@@ -296,13 +317,20 @@ h3{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 30px;
+    
+}
+.facilities .row {
+    display: flex;
+    justify-content: center;
 }
 .facilities-col{
-    flex-basis: 31%;
+    flex-basis: 32%;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
     text-align: left;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .facilities-col img{
     width: 100%;
@@ -322,8 +350,12 @@ h3{
 .testimonials{
     width: 80%;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 30px;
     text-align: center;
+}
+.testimonials .row { /*--new--*/
+    display: flex;
+    justify-content: center;
 }
 .testimonials-col{
     flex-basis: 44%;
@@ -365,7 +397,7 @@ h3{
     background-size: cover;
     border-radius: 10px;
     text-align: center;
-    padding: 50px 0;
+    padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,6 +408,11 @@ h3{
 .cta h1{
     color: #fff;
     margin-bottom: 40px;
+    padding: 0;
+}
+.cta h3{
+    color: #fff;
+    margin-bottom: 10px;
     padding: 0;
 }
 .cta p{
@@ -403,6 +440,12 @@ h3{
     color: #fff;
 }
 .icons .fa{
+    color: #fe0707;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.icons .fa-brands{
     color: #fe0707;
     margin: 0 13px;
     cursor: pointer;
@@ -455,9 +498,7 @@ h3{
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.image3:hover {
-    transform: scale(1.1);
-}
+
 .about-col1 #about-cinemen{
     width: 50%;
     padding: 0 100px;
@@ -497,9 +538,7 @@ h3{
     background: transparent;
     color: #fe0707;
 }
-.red-btn:hover{
-    color: #fff;
-}
+
 
 /*--------blog-content------*/
 

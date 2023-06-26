@@ -44,6 +44,17 @@ body {
 @media (hover: none) {
     
 }
+
+@font-face {
+    font-family: 'vladimir';
+    src: url(fonts/VLADIMIR.TTF);
+    /* Additional font formats can be included here if necessary */
+}
+@font-face {
+    font-family: 'candara';
+    src: url(fonts/Candara_Bold.ttf);
+    /* Additional font formats can be included here if necessary */
+}
 /*
 .back-video{
     background-color: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
@@ -391,7 +402,7 @@ h3{
 
 .cta{
     margin: 10px auto;
-    width: 80%;
+    width: 85%;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner2.jpg);
     background-position: center;
     background-size: cover;
@@ -466,10 +477,22 @@ h3{
     text-align: center;
     color: #fff;
 }
-.sub-header h1{
-    margin-top: 100px;
-    font-size: 50px; /*--wasnt there--*/
-}
+@media (min-width: 768px) {
+    /* Styles for desktop view */
+    .sub-header h1 {
+      margin-top: 50px;
+      font-size: 80px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Styles for phone view */
+    .sub-header h1 {
+      margin-top: 90px;
+      font-size: 50px !important;
+    }
+  }
+
 .about-us{
     width: 80%;
     margin: auto;
@@ -479,10 +502,12 @@ h3{
 .about-col1{
     flex-basis: 48%;
     padding: 10px 2px;
+    margin: auto;
 }
 .about-col2{
     flex-basis: 48%;
     padding: 10px 2px;
+    margin: auto;
 }
 
 .image1{
@@ -655,3 +680,128 @@ h3{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+/*---------------------------BLOG PAGES--------------------------------*/
+
+/*-------------CINEMEN---------------*/
+
+.cine-header{
+    height: 65vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 24, 122, 0.5),rgba(111, 0, 122, 0.5)), url(images/banner2.gif);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    /* Styles for desktop view */
+    .cine-header h1 img {
+        display: flex;
+        margin:auto;
+        width: 60%;
+        margin-top: -105px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Styles for phone view */
+    .cine-header h1 img {
+        display: flex;
+        margin:auto;
+        width: 80%;
+        padding-top: 50px;
+    }
+}
+
+.cine-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.cine-col1{
+    flex-basis: 48%;
+    padding: 10px 2px;
+    margin: auto;
+}
+.cine-col2{
+    flex-basis: 100%;
+    position: center;
+}
+
+.image1{
+    width: 100%;
+    border-radius: 40px;
+}
+.image2{
+    width: 70%;
+    border-radius: 40px;
+}
+.image3{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cine-col1 #about-cinemen{
+    width: 50%;
+    padding: 0 100px;
+}
+.cine-col1 h1{
+    padding-top: 0;
+
+}
+.cine-col1 h2{
+    padding: 0;
+    font-size: 20px;
+}
+.cine-col1 p{
+    padding: 15px 0 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.cine-col2 #cine-cinemen{
+    width: 50%;
+    padding: 0 100px;
+}
+.cine-col2 h1{
+    padding-top: 0;
+}
+.cine-col2 h2{
+    padding: 0;
+    font-size: 20px;
+}
+.cine-col2 p{
+    padding: 15px 0 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.red-btn{
+    border: 1px solid #fe0707;
+    background: transparent;
+    color: #fe0707;
+}
+
+
+.cine-us .cine-col2 .blogimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the image horizontally */
+    width: 80%;
+    border-radius: 40px;
+  }
+  
+  @media (max-width: 767px) {
+    .cine-us .cine-col2 .blogimage {
+      width: 100%; /* Adjust the width for phone view */
+    }
+  }
+
+  .cine-col2 h2 {
+    font-size: 24px; /* Adjust the font size as per your preference */
+  }

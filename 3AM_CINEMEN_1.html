@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3AM website</title>
+    <link rel="stylesheet" href="3AM_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@336&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/46db68cfc0.js" crossorigin="anonymous"></script>
+<link href="https://www.dafontfree.net/embed/dmxhZGltaXItc2NyaXB0LXJlZ3VsYXImZGF0YS8xMy92LzY1NTU2L1ZMQURJTUlSLlRURg" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <section class="cine1-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                 <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="3AM_about.html">ABOUT</a></li>
+                    <li><a href="3AM_blog.html">BTS</a></li>
+                    <li><a href="3AM_course.html">SUPPORT</a></li>
+                 </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1><img src='fonts/cinemen.png'></h1>
+
+</section>
+
+<!------------about us content------------>
+<section class="cine-us">
+    <div class="row">
+        <div class="cine-col2">
+            <h1>MOVIE NIGHT - The Pilot Episode</h1>
+            <p>Film Club is the episode that kickstarts 
+            </p>
+            <p>Flash forward to 2019: Brian and Azael find themselves parked in a car late at night, enjoying 
+                their McDonalds, discussing their next film endevour. Azael proposes the idea of creating a show 
+                based on their friend group as they strive to break into Hollywood. They both agree that the pivotal 
+                episode to kickstart their filmmaking journey should be based on their personal experience at 
+                that college film club.
+            </p>
+            <div class="video-container">
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/sIiAIjZqu7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h1>FILMING & POST-PRODUCTION - Most difficult project yet</h1>
+            <p>The filming process commenced in 2021. It was very difficult to get a "classroom" to film in so 
+                ultimately it was decided to build one inside of Brian's garage using insulation foam boards. 
+                There were a total of 9 actors, all adults with busy lives, so making sure everyone's schedules 
+                aligned was very difficult. On top of that, filming inside the garage could get really hot due to 
+                lights and climate. Several breaks had to be taken just to cool off.
+            </p>
+            <p>For outdoor shots, the majority of scenes were filmed in public locations, resulting in unwanted 
+                background noise. Additionally, there was a learning curve in operating the audio equipment, 
+                leading to some less-than-optimal audio quality. A significant amount of time was dedicated to 
+                salvaging shots and improving audio during post-production. In some cases, the audio issues were 
+                so severe that dubbing became necessary. This eventually led to the creation of 
+                <b>CINEMEN EP2: FILM CLUB in 4K</b>, a version of the episode featuring cleaner audio, enhanced 
+                color correction, and a shorter runtime.
+            </p>
+            <div class="video-container">
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/ca7rgvWnyjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h1>BTS PICTURES</h1>
+            <br>
+            <img class="blogimage" src="images/group.jpg">
+        </div>
+    </div>
+    <br>
+</section>
+
+
+<!------footer-->
+<section class="footer">
+    <h4>FOLLOW US ON</h4>
+    <div class="icons">
+        <a href="https://www.instagram.com/3am_entertainment_official/?hl=en" class="youtube-links">
+            <i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@3AM_Entertainment." class="youtube-links">
+            <i class="fa fa-youtube-play"></i></a>
+        <a href="https://twitter.com/3amntertainment?s=20" class="youtube-links">
+            <i class="fa fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@3am_entertainment" class="youtube-links">
+            <i class="fa-brands fa-tiktok" style="color: #fe0707"></i>
+          </a>
+    </div>
+    <p>TM & © 2023 3AM Entertainment All rights reserved.</p>
+</section>
+
+<!---toggle menu in java--->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

@@ -412,7 +412,7 @@ h3{
 .cta{
     margin: 10px auto;
     width: 85%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(images/wanderer\ support.gif);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -718,6 +718,15 @@ h3{
 
 @media (max-width: 767px) {
     /* Styles for phone view */
+    .cine1-header{
+        height: 65vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(122, 0, 0, 0.5),rgba(122, 0, 0, 0.5)), url(images/phone\ cinemen\ background.gif);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
     .cine1-header h1 img {
         display: flex;
         margin:auto;
@@ -872,6 +881,15 @@ h3{
 
 @media (max-width: 767px) {
     /* Styles for phone view */
+    .cine2-header{
+        height: 65vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 61, 122, 0.5),rgba(0, 61, 122, 0.5)), url(images/phone\ cinemen\ background.gif);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
     .cine2-header h1 img {
         display: flex;
         margin:auto;

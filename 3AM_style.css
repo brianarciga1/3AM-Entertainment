@@ -32,6 +32,7 @@ body {
         bottom: 49%;
         opacity: 1;
         border: 3px solid #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
     }
     .image3:hover {
         transform: scale(1.1);
@@ -85,6 +86,8 @@ nav{ /*aligns stuff in nav rom index*/
 }
 nav img{
     width: 150px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.854)); /* Adjust the drop shadow properties */
+    pointer-events: none; /* Ignore pointer events on the image */
 }
 .nav-links{
     flex: 1;
@@ -119,6 +122,7 @@ nav img{
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
 }
 .text-box h1{
     font-size: 62px;
@@ -182,6 +186,7 @@ nav img{
     background: transparent;
     position: relative;
     cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
 }
 
 nav .fa{
@@ -318,6 +323,40 @@ h3{
     margin: auto;
 }
 
+@media (max-width: 767px) {
+    .layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        margin: auto;
+    }
+    .layer h3 {
+        bottom: 10%;
+        opacity: 1;
+        border: 3px solid #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
+        background: rgba(226,0,0,0.6);
+    }
+    .youtube-links {
+        color: white;
+        text-decoration: none;
+    }
+}
+
 
 .youtube-links{
     color: white;
@@ -423,6 +462,7 @@ h3{
     align-items: center;
     flex-direction: column;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
 }
 
 .cta h1{
@@ -491,6 +531,7 @@ h3{
     .sub-header h1 {
       margin-top: 50px;
       font-size: 80px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
     }
   }
   
@@ -499,6 +540,7 @@ h3{
     .sub-header h1 {
       margin-top: 90px;
       font-size: 50px !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
     }
   }
 
@@ -779,6 +821,10 @@ h3{
     padding: 0;
     font-size: 20px;
 }
+.cine-us h4 {
+    font-size: 20px; /* Adjust the font size as desired */
+    text-align: center;
+}
 .cine-col1 p{
     padding: 15px 0 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -934,4 +980,37 @@ h3{
         filter: drop-shadow(-8px 2px 4px rgba(0, 0, 0, 0.854)); /* Adjust the drop shadow properties */
         pointer-events: none; /* Ignore pointer events on the image */
     }
+}
+
+/*----art col---*/
+
+.art{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    
+}
+.art .row {
+    display: flex;
+    justify-content: center;
+}
+.art-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.art-col img{
+    width: 100%;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+.art-col p{
+    padding: 0%;
+    text-align: left;
+}
+.art-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
 }

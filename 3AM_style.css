@@ -15,6 +15,16 @@ body {
     background-size: cover;
     position: relative;
 }
+@media (max-width: 767px) {
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(images/banner.gif);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+}
 
 @media (hover: hover) {
     .nav-links ul li:hover::after{
@@ -554,7 +564,23 @@ h3{
     flex-basis: 48%;
     padding: 10px 2px;
     margin: auto;
+    justify-content: center;
 }
+/*
+@media (max-width: 767px) {
+    /* Styles for phone view
+
+    .about-col1{
+        flex-basis: 48%;
+        padding: 10px 2px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+*/
+
 .about-col2{
     flex-basis: 48%;
     padding: 10px 2px;
@@ -951,7 +977,8 @@ h3{
 .wand-header{
     height: 65vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85)), url(images/wanderer\ background.gif);
+    /*background-image: linear-gradient(rgba(0, 122, 108, 0.5),rgba(0, 122, 108, 0.5)), url(images/wanderer\ background\ 3.gif);*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(images/wanderer\ background\ 3.gif);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -972,6 +999,16 @@ h3{
 
 @media (max-width: 767px) {
     /* Styles for phone view */
+    .wand-header{
+        height: 65vh;
+        width: 100%;
+        /*background-image: linear-gradient(rgba(0, 122, 108, 0.5),rgba(0, 122, 108, 0.5)), url(images/wanderer\ background\ 3.gif);*/
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(images/phone\ wanderer\ background\ 3.gif);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
     .wand-header h1 img {
         display: flex;
         margin:auto;
@@ -1005,6 +1042,26 @@ h3{
     display: block;
     margin: 0 auto; /* Center the image horizontally */
 }
+.wide-image {
+    /* Styles for the custom image class */
+
+    width: 90%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image fills the container */
+    /* Add any other styles you want */
+}
+.wide-image2 {
+    /* Styles for the custom image class */
+
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image fills the container */
+    /* Add any other styles you want */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .art-col p{
     padding: 0%;
     text-align: left;
@@ -1013,4 +1070,71 @@ h3{
     margin-top: 16px;
     margin-bottom: 15px;
     text-align: left;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+}
+.container .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-container .image{
+    height: 250px;
+    width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .image-container .image:hover img{
+    transform: scale(1.1);
+}
+
+.container .popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.container .popup-image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.container .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .container .popup-image img{
+        width: 95%;
+    }
+
 }

@@ -60,9 +60,37 @@
                 intentionally portrayed as a blank slate, a new addition to the crew, in order to facilitate the introduction 
                 of the rest of the cast. In reality, Damien has been part of the friend group since high school.
             </p>
+            <!------------image container----------->
             <h1>BTS PICTURES</h1>
             <br>
-            <img class="blogimage" src="images/group.jpg">
+            <div class="container">
+                <div class="image-container">
+                    <div class="image"><img src="images/wanderer gofundme.jpg" alt=""></div>
+                    <div class="image"><img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt=""></div>
+                    <div class="image"><img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt=""></div>
+                    <div class="image"><img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt=""></div>
+                    <div class="image"><img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt=""></div>
+                    <div class="image"><img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt=""></div>
+                </div>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt="">
+                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('.image-container img').forEach(image =>{
+                    image.onclick = () =>{
+                        document.querySelector('.popup-image').style.display = 'block';
+                        document.querySelector('.popup-image img').src = image.getAttribute('src');
+                    }
+                });
+
+                document.querySelector('.popup-image span').onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'none';
+                }
+            </script>
         </div>
     </div>
     <br>

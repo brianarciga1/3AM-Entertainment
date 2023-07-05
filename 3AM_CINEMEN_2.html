@@ -67,9 +67,57 @@
                 <iframe class="youtube-video" src="https://www.youtube.com/embed/sIiAIjZqu7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <br>
+
+            <!------------image container----------->
             <h1>BTS PICTURES</h1>
+            <h2>By Cristian A. Castillo</h2>
             <br>
-            <img class="blogimage" src="images/group.jpg">
+            <div class="container">
+                <div class="image-container">
+                    <div class="image"><img src="cinemen pics/IMG_4073.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/IMG_4076.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/IMG_4074.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/IMG_4080.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/IMG_4075.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/IMG_4079.jpg" alt=""></div>
+                </div>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="cinemen pics/MVI_0097.00_39_58_18.Still012.jpg" alt="">
+                </div>
+            </div>
+            <br>
+            <!------------image container----------->
+            <h1>BTS PICTURES cont.</h1>
+            <br>
+            <div class="container">
+                <div class="image-container">
+                    <div class="image"><img src="cinemen pics/MVI_0097.00_39_58_18.Still012.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/MVI_0097.00_39_50_10.Still014.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/MVI_0097.00_40_11_16.Still010.jpg" alt=""></div>
+                    <div class="image"><img src="cinemen pics/cachedImage.jpg" alt=""></div>
+                </div>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="cinemen pics/MVI_0097.00_39_58_18.Still012.jpg" alt="">
+                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('.image-container img').forEach(image =>{
+                    image.onclick = () =>{
+                        document.querySelector('.popup-image').style.display = 'block';
+                        document.querySelector('.popup-image img').src = image.getAttribute('src');
+                    }
+                });
+
+                document.querySelector('.popup-image span').onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'none';
+                }
+            </script>
+
         </div>
     </div>
     <br>

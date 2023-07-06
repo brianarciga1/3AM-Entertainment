@@ -52,6 +52,7 @@
             <img class="blogimage" src="images/wanderer art 3.jpg">
             <h4>Prototype (left) Improved version (right)</h4>
             <br>
+            <br>
             <img class="blogimage" src="images/wanderer art 4.jpg">
             <h4>Inspirations for the helmet: Daft Punk (left), Power Rangers (Top Right), Hajime Soroyama's "Sexy Robot" art (Bottom Right)</h4>
             <br>
@@ -87,6 +88,7 @@
             <p>In 2023, a <b>gofundme</b> page was specifically created for the film (see the support page for 
                 more details).
             </p>
+            <br>
             <h1>OUR PROGRESS</h1>
             <section class="art">
                 <div class="row">
@@ -114,49 +116,53 @@
             <br>
             <h1>CONCEPT ART - The Wanderer</h1>
             <h2>By Brian Arciga</h2>
-            <section class="art">
-                <div class="row">
-                    <div class="art-col">
-                        <img src="images/wanderer gofundme.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/drawing wanderer.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/wanderer art 1.jpg">
-                    </div>
+            <br>
+            <div class="container">
+                <div class="image-container">
+                    <div class="image"><img src="images/wanderer gofundme.jpg" alt=""></div>
+                    <div class="image"><img src="images/drawing wanderer.jpg" alt=""></div>
+                    <div class="image"><img src="images/wanderer art 1.jpg" alt=""></div>
                 </div>
-            </section>
-            <h1>CONCEPT ART - The Nomad</h1>
-            <h2>By Brian Arciga</h2>
-            <section class="art">
-                <div class="row">
-                    <div class="art-col">
-                        <img src="images/Nomad.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/drawing nomad.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/nomad art 1.jpg">
-                    </div>
+                <br>
+
+                <h1>CONCEPT ART - The Nomad</h1>
+                <h2>By Brian Arciga</h2>
+                <br>
+                <div class="image-container">
+                    <div class="image"><img src="images/Nomad.jpg" alt=""></div>
+                    <div class="image"><img src="images/drawing nomad.jpg" alt=""></div>
+                    <div class="image"><img src="images/nomad art 1.jpg" alt=""></div>
                 </div>
-            </section>
-            <h1>CONCEPT ART - The Vendor</h1>
-            <h2>By Brian Arciga (First and Second) and Liz Garcia (Third)</h2>
-            <section class="art">
-                <div class="row">
-                    <div class="art-col">
-                        <img src="images/Vendor.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/drawing vendor.jpg">
-                    </div>
-                    <div class="art-col">
-                        <img src="images/vendor art 1.jpg">
-                    </div>
+                <br>
+
+                <h1>CONCEPT ART - The Vendor</h1>
+                <h2>By Brian Arciga (First and Second) and Liz Garcia (Third)</h2>
+                <br>
+                <div class="image-container">
+                    <div class="image"><img src="images/Vendor.jpg" alt=""></div>
+                    <div class="image"><img src="images/drawing vendor.jpg" alt=""></div>
+                    <div class="image"><img src="images/vendor art 1.jpg" alt=""></div>
                 </div>
-            </section>
+                <br>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="images/2021-09-15 00-02-22.00_44_02_22.Still001.png" alt="">
+                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('.image-container img').forEach(image =>{
+                    image.onclick = () =>{
+                        document.querySelector('.popup-image').style.display = 'block';
+                        document.querySelector('.popup-image img').src = image.getAttribute('src');
+                    }
+                });
+
+                document.querySelector('.popup-image span').onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'none';
+                }
+            </script>
         </div>
     </div>
     <br>

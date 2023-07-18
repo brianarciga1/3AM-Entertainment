@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>3AM website</title>
+    <link rel="stylesheet" href="3AM_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@336&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Oswald:wght@336&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/3amFavicon.png">
+    <script src="https://kit.fontawesome.com/46db68cfc0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <section class="header">
+        <!----<video autoplay loop muted plays-inline class="back-video">
+            <source src="images/banner.mp4" type="video/mp4">
+        </video>--->
+
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                 <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="3AM_about.html">ABOUT</a></li>
+                    <li><a href="3AM_blog.html">BTS</a></li>
+                    <li><a href="3AM_course.html">SUPPORT</a></li>
+                 </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<div class="text-box">
+    <h1>The Best ENTERTAINMENT</h1>
+    <p><span>At 3AM</span> 
+        <span>our ideas take flight,</span> 
+        <span>Hence the name,</span> 
+        <span>it just felt right</span> 
+    </p>
+    <a href="https://www.youtube.com/@3AM_Entertainment." class="hero-btn">Visit our YouTube Channel!</a>
+</div>
+</section>
+
+<!-----course----->
+
+<!--------campus--------->
+
+<section class="campus">
+    <h1><i class="fa fa-film"></i> NOW PLAYING</h1>
+    <p>Click below to view our latest works!</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="images/Cinemen Ep3.gif">
+            <div class="layer">
+                <h3>CINEMEN EP3:<br>BRIAN IN THE MIDDLE</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/Cinemen Ep 2.gif">
+            <div class="layer">
+                <h3><a href="https://youtu.be/ca7rgvWnyjE" class="youtube-links">CINEMEN EP2:<br>FILM CLUB</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/Ep 1.gif">
+            <div class="layer">
+                <h3><a href="https://youtu.be/yn04nxC9enU" class="youtube-links">CINEMEN EP1:<br>MOVIE NIGHT</h3>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+<!------------about us content------------>
+<section class="index-bts-us">
+    <div class="row">
+        <div class="index-bts-col">
+            <h1>BEHIND THE SCENES</h1>
+            <p>Explore our BTS page to get an exclusive glimpse behind the curtains!</p>
+            <a href="3AM_blog.html" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="index-bts-col">
+            <div id="slider">
+                <img src="images/Wanderer blog.jpg">
+                <img src="images/CINEMEN BLOG.jpg">
+                <img src="images/CINEMEN2 BLOG.jpg">
+            </div>
+            <div class="slider-nav">
+                <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="next" onclick="changeSlide(1)">&#10095;</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('#slider img');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  // Function to show the current slide and hide others
+  function showSlide() {
+    slides.forEach((slide) => {
+      slide.style.display = 'none';
+    });
+    slides[slideIndex].style.display = 'block';
+
+    dots.forEach((dot) => {
+      dot.classList.remove('active');
+    });
+    dots[slideIndex].classList.add('active');
+  }
+
+  // Function to change the slide index and show the new slide
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    } else if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    showSlide();
+  }
+
+  // Function to handle dot click event
+  function dotClick(index) {
+    clearInterval(slideInterval);
+    slideIndex = index;
+    showSlide();
+    slideInterval = setInterval(autoSlide, 3000);
+  }
+
+  // Function to automatically change the slide every 3 seconds
+  function autoSlide() {
+    changeSlide(1);
+  }
+
+  // Show the initial slide
+  showSlide();
+
+  // Set interval for automatic slide change
+  let slideInterval = setInterval(autoSlide, 3000);
+
+  // Event listener for previous arrow
+  prevBtn.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    changeSlide(-1);
+    slideInterval = setInterval(autoSlide, 3000);
+  });
+
+  // Event listener for next arrow
+  nextBtn.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    changeSlide(1);
+    slideInterval = setInterval(autoSlide, 3000);
+  });
+
+  // Event listener for dot click
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      dotClick(index);
+    });
+  });
+});
+
+</script>
+
+<div class="container">
+    <!-- Slider main container -->
+    <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="images/Wanderer blog.jpg"></div>
+      <div class="swiper-slide"><img src="images/CINEMEN BLOG.jpg"></div>
+      <div class="swiper-slide"><img src="images/CINEMEN2 BLOG.jpg"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    // Optional parameters
+    loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  });
+</script>
+
+<!-----------------facilities-->
+<hr class="section-divider">
+
+<section class="facilities">
+    <h1><i class="fa fa-video-camera"></i> COMING SOON</h1>
+    <p>Currently in the works!</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="images/wanderer head.jpg">
+            <h3>The Wanderer</h3>
+            <p>Experience the ultimate tribute to the iconic music duo: Daft Punk!
+                 We follow <b>The Wanderer</b> as he navigates the harsh and 
+                 desolate wasteland that he calls home. Along the way, he encounters
+                 <b>The Nomad</b>, a fellow traveler with a score to settle. It's up 
+                 to <b>The Wanderer</b> to show him who's in charge!
+            </p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/wanderer gofundme.jpg">
+            <h3>Boys in Blue</h3>
+            <p>Some call them lawbringers, others call them heroes, we call them the 
+                <b>Boys in Blue</b>; our devoted public servants protecting civilians from 
+                rampant crime and keeping a watchful eye on their ... watch. But who's 
+                watching them? Watch the day to day life of squad 708 in <b>Boys in Blue</b>!
+           </p>
+        </div>
+    </div>
+</section>
+
+<!-----------testimonials------->
+<hr class="section-divider">
+
+<section class="testimonials">
+    <h1>CRITICS ARE SAYING...</h1>
+    <p>What viewers have to say!</p>
+
+    <div class="row">
+        <div class="testimonials-col">
+            <img src="images/ABMiller.jpg">
+            <div>
+                <p>Best Alumni Production: The Wanderer</p>
+                <h3>A.B. Miller Film Festival 2022</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------call to action-->
+
+<!------footer-->
+<section class="footer">
+    <h4>FOLLOW US ON</h4>
+    <div class="icons">
+        <a href="https://www.instagram.com/3am_entertainment_official/?hl=en" class="youtube-links">
+            <i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@3AM_Entertainment." class="youtube-links">
+            <i class="fa fa-youtube-play"></i></a>
+        <a href="https://twitter.com/3amntertainment?s=20" class="youtube-links">
+            <i class="fa fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@3am_entertainment" class="youtube-links">
+            <i class="fa-brands fa-tiktok" style="color: #fe0707"></i>
+          </a>
+    </div>
+    <p>TM & © 2023 3AM Entertainment All rights reserved.</p>
+</section>
+<!--<a href="https://youtu.be/yn04nxC9enU" class="youtube-links"></a>-->
+<!---toggle menu in java--->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

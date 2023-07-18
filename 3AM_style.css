@@ -32,7 +32,6 @@ body {
         width: 100%;
     }
     .hero-btn:hover{
-        border: 3px solid #fe0707;
         background: #fe0707;
         transition: 0.5s;
     }
@@ -1289,10 +1288,6 @@ h3{
   
   .index-bts-col h1 {
     margin-bottom: 10px;
-  }
-  
-  .button-container {
-    margin-top: 10px;
   }
   
   .container2 {

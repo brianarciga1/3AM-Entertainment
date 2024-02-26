@@ -422,10 +422,7 @@ h3{
     padding-top: 30px;
     text-align: center;
 }
-.testimonials .row { /*--new--*/
-    display: flex;
-    justify-content: center;
-}
+
 .testimonials-col{
     flex-basis: 44%;
     border-radius: 10px;
